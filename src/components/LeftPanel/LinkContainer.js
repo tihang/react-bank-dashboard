@@ -1,12 +1,14 @@
 import React from "react";
-import { StyledLink, StyledImage, StyledLinkContainer } from "./styled";
+import { StyledLink, StyledImage } from "./styled";
 
 const LinkContainer = (props) => {
   return (
-    <StyledLinkContainer>
-      <StyledImage src={props.logo} />
-      <StyledLink to={props.to}>{props.children}</StyledLink>
-    </StyledLinkContainer>
+    <StyledLink {...props}>
+      <div>
+        <StyledImage src={props.logo} />
+      </div>
+      <div>{props.children}</div>
+    </StyledLink>
   );
 };
 

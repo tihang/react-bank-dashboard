@@ -1,3 +1,19 @@
-import Logo from './Logo';
+import React from "react";
+import Logo from "./Logo";
+import Burger from "./Burger";
+import ProfileBar from "./ProfileBar";
+import { HeaderWrapper } from "./styled";
 
-export default Logo
+const Header = (props) => {
+  return (
+    <HeaderWrapper>
+      <Burger open={props.open} setOpen={props.setOpen}></Burger>
+      <Logo></Logo>
+      <ProfileBar>
+        <span>Test text</span>
+      </ProfileBar>
+    </HeaderWrapper>
+  );
+};
+
+export default Header;

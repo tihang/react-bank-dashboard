@@ -4,7 +4,7 @@ import icon from "../../logo.svg";
 
 const Logo = () => {
   return (
-    <LogoContainer>
+    <LogoContainer onClick={(event) => (window.location.href = "/")}>
       <LogoIcon src={icon} alt="Logo" />
       <LogoTitle>Rastra Bank</LogoTitle>
     </LogoContainer>

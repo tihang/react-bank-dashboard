@@ -13,33 +13,33 @@ import report from "../../icons/report.svg";
 import settings from "../../icons/settings.svg";
 
 // Import Pages
-import Dashboard from "../../pages/Dashboard";
+import Dashboard from "../../pages/Dashboard/Dashboard.jsx";
 import Investments from "../../pages/Investments";
 
-const Navigation = () => {
+const Navigation = ({ open, setOpen }) => {
   return (
     <React.Fragment>
       <Router>
-        <LeftPanelContainer>
-          <LinkContainer logo={safebox} to="/">
+        <LeftPanelContainer open={open} onClick={() => setOpen(false)}>
+          <LinkContainer logo={safebox} exact to="/">
             Dashboard
           </LinkContainer>
-          <LinkContainer logo={investments} to="/investments">
+          <LinkContainer logo={investments} exact to="/investments">
             Investments
           </LinkContainer>
-          <LinkContainer logo={card} to="/investments">
+          <LinkContainer logo={card} exact to="/cards">
             Cards
           </LinkContainer>
-          <LinkContainer logo={loan} to="/investments">
+          <LinkContainer logo={loan} exact to="/loan">
             Loans
           </LinkContainer>
-          <LinkContainer logo={wallet} to="/investments">
+          <LinkContainer logo={wallet} exact to="/wallet">
             Wallet
           </LinkContainer>
-          <LinkContainer logo={report} to="/investments">
+          <LinkContainer logo={report} exact to="/report">
             Reports
           </LinkContainer>
-          <LinkContainer logo={settings} to="/investments">
+          <LinkContainer logo={settings} exact to="/settings">
             Settings
           </LinkContainer>
         </LeftPanelContainer>
@@ -53,7 +53,7 @@ const Navigation = () => {
         */}
         <Switch>
           <Route exact path="/" component={Dashboard} />
-          <Route path="/investments" component={Investments} />
+          <Route exact path="/investments" component={Investments} />
         </Switch>
       </Router>
     </React.Fragment>

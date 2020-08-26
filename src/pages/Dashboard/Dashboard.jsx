@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const HomeWrapper = styled.div``;
+const DashboardWrapper = styled.div``;
 
 const Dashboard = () => {
   return (
-    <HomeWrapper>
-      <h1>Dashboard</h1>
-    </HomeWrapper>
+    <DashboardWrapper>
+      <h1>Dashboard Overview</h1>
+    </DashboardWrapper>
   );
 };
 
