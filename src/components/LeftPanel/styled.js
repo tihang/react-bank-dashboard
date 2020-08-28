@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styled, { css } from "styled-components";
+import styled from "styled-components/macro";
 
 export const LeftPanelContainer = styled.div`
   background-color: ${(props) => props.theme.background};
@@ -20,13 +20,14 @@ export const StyledLink = styled(NavLink)`
   color: ${(props) => props.theme.secondary};
   outline: none;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: left;
-  font-family: Roboto;
+  font-family: "Nunito";
   transition: 0.2s;
 
   &:hover {
     background-color: whitesmoke;
+    color: ${(props) => props.theme.success};
   }
 
   &.active {
@@ -36,7 +37,7 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const StyledImage = styled.img`
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.2rem;
+  width: 1.2rem;
   padding: 0 2rem;
 `;

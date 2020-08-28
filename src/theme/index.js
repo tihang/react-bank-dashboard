@@ -1,6 +1,8 @@
 const MainTheme = {
   primary: "#56c46b",
   secondary: "grey",
+  text_light: "dimgray",
+  text_dark: "black",
   background: "white",
   secondary_background: "whitesmoke",
   alert: "yellow",
