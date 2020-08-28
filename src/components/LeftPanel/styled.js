@@ -8,6 +8,9 @@ export const LeftPanelContainer = styled.div`
 
   @media (max-width: 768px) {
     display: ${({ open }) => (open ? "block" : "none")};
+    position: fixed;
+    width: 100%;
+    z-index: 99;
   }
 `;
 
