@@ -10,3 +10,9 @@ export const CardsContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  padding: 2rem;
+  justify-content: flex-start;
+`;

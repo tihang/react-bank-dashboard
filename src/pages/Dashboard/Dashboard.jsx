@@ -3,6 +3,7 @@ import { Heading, SubHeading } from "../.././elements/Heading";
 import { DashboardWrapper } from "./styled";
 import CardDetails from "./CardDetail/CardDetail";
 import CardInfo from "./CardInfo/CardInfo";
+import Spending from "./Spending/Spending";
 
 const Dashboard = () => {
   return (
@@ -13,6 +14,7 @@ const Dashboard = () => {
         <CardInfo></CardInfo>
         <div>
           <SubHeading>My Spendings</SubHeading>
+          <Spending></Spending>
         </div>
         <div>
           <SubHeading>Recent Transaction</SubHeading>

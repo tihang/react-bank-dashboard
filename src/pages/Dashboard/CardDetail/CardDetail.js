@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import "./card.scss";
 
-import { CardsContainer, CardDetailWrapper } from "./styled";
+// Custom styles
+import { CardsContainer, CardDetailWrapper, ButtonContainer } from "./styled";
 
+// Reusable elems
 import { SubHeading } from "../../../elements/Heading";
+import { PrimaryButton, SecondaryButton } from "./../../../elements/Button";
 
 const CardDetails = () => {
   const [cardState, setCardState] = useState({
-    cvc: "",
+    cvc: "00",
     expiry: "0922",
-    focus: "",
     name: "John Doe",
     number: "4929717326760518",
     issuer: "visa",
@@ -28,6 +30,11 @@ const CardDetails = () => {
           number={cardState.number}
         />
       </CardsContainer>
+
+      <ButtonContainer>
+        <PrimaryButton>Transfer</PrimaryButton>
+        <SecondaryButton>Add new card</SecondaryButton>
+      </ButtonContainer>
     </CardDetailWrapper>
   );
 };

@@ -14,7 +14,7 @@ export const SubHeading = styled.h2`
   font-family: Nunito, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: ${(props) => props.theme.text_light};
   outline: none;
   padding: 8px 8px;

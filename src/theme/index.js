@@ -1,5 +1,5 @@
 const MainTheme = {
-  primary: "#56c46b",
+  primary: "royalblue",
   secondary: "grey",
   text_light: "dimgray",
   text_dark: "black",

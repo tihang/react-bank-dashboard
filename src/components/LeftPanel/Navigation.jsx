@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { LeftPanelContainer } from "./styled";
 import LinkContainer from "./LinkContainer";
@@ -17,10 +17,38 @@ import Dashboard from "../../pages/Dashboard/Dashboard.jsx";
 import Investments from "../../pages/Investments";
 
 const Navigation = ({ open, setOpen }) => {
+  //Ref node for left panel container
+  const node = useRef();
+
+  // To handle
+  const handleClickOutside = (e) => {
+    if (!node.current.contains(e.target)) {
+      // Outside click
+      setOpen(false);
+    }
+    // Inside click
+  };
+
+  // Close mobile nav when scrolled
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("scroll", handleClickOutside);
+    } else {
+      document.removeEventListener("scroll", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("scroll", handleClickOutside);
+    };
+  }, [open]);
+
   return (
     <React.Fragment>
       <Router>
-        <LeftPanelContainer open={open} onClick={() => setOpen(false)}>
+        <LeftPanelContainer
+          ref={node}
+          open={open}
+          onClick={() => setOpen(false)}
+        >
           <LinkContainer logo={safebox} exact to="/">
             Dashboard
           </LinkContainer>
