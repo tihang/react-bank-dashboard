@@ -43,12 +43,13 @@ export const StyledProfilePic = styled.img`
   width: 28px;
   border-radius: 100px;
   padding: 1px;
-  border: 1px solid ${(props) => props.theme.primary};
+  border: 1px solid ${(props) => props.theme.success};
   /* padding: 1rem; */
 `;
 
 export const StyledProfileBarSvg = styled.i`
-  color: ${(props) => props.theme.secondary};
+  color: ${(props) =>
+    props.open ? props.theme.success : props.theme.secondary};
   padding: 0.5rem;
   transition: all 0.3s ease-in-out 0s;
 

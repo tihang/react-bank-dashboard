@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BarChart,
+  ResponsiveContainer,
   CartesianGrid,
   XAxis,
   YAxis,
@@ -8,6 +9,8 @@ import {
   Bar,
   Tooltip,
 } from "recharts";
+
+import { SpendingWrapper } from "./styled";
 
 const data = [
   {
@@ -74,15 +77,19 @@ const data = [
 
 const Spending = () => {
   return (
-    <BarChart width={500} height={300} margin={{ top: 50 }} data={data}>
-      <CartesianGrid strokeDasharray="10 1" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Bar dataKey="Income" fill="#82ca9d" />
-      <Bar dataKey="Expense" fill="#F08080" />
-    </BarChart>
+    <SpendingWrapper>
+      <ResponsiveContainer height={320} width="98%" minWidth="0">
+        <BarChart margin={{ top: 50 }} data={data}>
+          <CartesianGrid strokeDasharray="1 1" strokeOpacity={0} />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Bar dataKey="Income" fill="#82ca9d" />
+          <Bar dataKey="Expense" fill="#F08080" />
+        </BarChart>
+      </ResponsiveContainer>
+    </SpendingWrapper>
   );
 };
 
