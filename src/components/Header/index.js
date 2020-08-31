@@ -9,7 +9,7 @@ const Header = (props) => {
     <HeaderWrapper>
       <Burger open={props.open} setOpen={props.setOpen}></Burger>
       <Logo></Logo>
-      <ProfileBar>
+      <ProfileBar darkTheme={props.darkTheme} setDarkTheme={props.setDarkTheme}>
         <span>Test text</span>
       </ProfileBar>
     </HeaderWrapper>

@@ -9,7 +9,7 @@ export const CardTable = styled.table`
 
   td {
     padding: 1.5rem;
-
+    color: ${(props) => props.theme.text_light};
     span {
       color: ${(props) => props.theme.secondary};
     }

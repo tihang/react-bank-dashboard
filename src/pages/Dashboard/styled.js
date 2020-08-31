@@ -10,6 +10,7 @@ export const DashboardWrapper = styled.div`
   grid-template-areas:
     "a c"
     "b d";
+  background-color: ${(props) => props.theme.background};
 
   @media (max-width: 1051px) {
     grid-template-columns: 1fr;

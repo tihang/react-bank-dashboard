@@ -13,8 +13,9 @@ import report from "../../icons/report.svg";
 import settings from "../../icons/settings.svg";
 
 // Import Pages
-import Dashboard from "../../pages/Dashboard/Dashboard.jsx";
-import Investments from "../../pages/Investments";
+import Dashboard from "../../pages/Dashboard/Dashboard";
+import Investments from "../../pages/Investments/Investments";
+import Cards from "../../pages/Cards/Cards";
 
 const Navigation = ({ open, setOpen }) => {
   //Ref node for left panel container
@@ -82,6 +83,7 @@ const Navigation = ({ open, setOpen }) => {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/investments" component={Investments} />
+          <Route exact path="/cards" component={Cards} />
         </Switch>
       </Router>
     </React.Fragment>

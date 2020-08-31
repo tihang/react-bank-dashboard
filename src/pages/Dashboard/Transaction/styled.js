@@ -20,6 +20,10 @@ export const TransactionTable = styled.table`
     font-size: 1rem;
     color: ${(props) => props.theme.text_dark};
     padding: 1rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 
   td {

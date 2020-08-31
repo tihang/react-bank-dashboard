@@ -1,4 +1,4 @@
-const MainTheme = {
+export const MainTheme = {
   primary: "royalblue",
   secondary: "grey",
   text_light: "dimgray",
@@ -11,4 +11,15 @@ const MainTheme = {
   font: "sans-serif",
 };
 
-export default MainTheme;
+export const DarkTheme = {
+  primary: "#e94560",
+  secondary: "grey",
+  text_light: "#B0C4DE",
+  text_dark: "white",
+  background: "#1a1a2e",
+  secondary_background: "#0f3460",
+  alert: "yellow",
+  success: "#56c46b",
+  danger: "red",
+  font: "sans-serif",
+};

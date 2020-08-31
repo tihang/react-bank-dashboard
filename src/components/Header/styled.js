@@ -4,6 +4,7 @@ export const HeaderWrapper = styled.div`
   display: grid;
   grid-template-columns: minmax(260px, 12%) 1fr;
   align-items: center;
+  background-color: ${(props) => props.theme.background};
   border-bottom: 4px solid ${(props) => props.theme.secondary_background};
 
   /* @media (max-width: 768px) {
@@ -20,14 +21,33 @@ export const HeaderWrapper = styled.div`
   }
 `;
 
+// THEME TOGGLER
+export const ThemeToggler = styled.img`
+  height: 50px;
+  width: 50px;
+  margin-right: 24px;
+  color: white;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    margin-right: 10px;
+  }
+`;
+
 // PROFILE BAR
 
 export const ProfileBarWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   padding-right: 0.8rem;
   position: relative;
+
+  /* @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  } */
 `;
 
 export const StyledProfileBar = styled.div`
@@ -39,18 +59,18 @@ export const StyledProfileBar = styled.div`
 `;
 
 export const StyledProfilePic = styled.img`
-  height: 28px;
-  width: 28px;
+  height: 34px;
+  width: 34px;
   border-radius: 100px;
-  padding: 1px;
-  border: 1px solid ${(props) => props.theme.success};
+  padding: 2px;
+  border: 2px solid ${(props) => props.theme.success};
   /* padding: 1rem; */
 `;
 
 export const StyledProfileBarSvg = styled.i`
   color: ${(props) =>
     props.open ? props.theme.success : props.theme.secondary};
-  padding: 0.5rem;
+  padding: 0.1rem;
   transition: all 0.3s ease-in-out 0s;
 
   ${(props) => (props.open ? "transform: rotate(360deg)" : null)}
@@ -66,7 +86,7 @@ export const StyledProfileDropdown = styled.div`
           right: 18px;
           top: 52px;
           z-index: 99;
-          width: 200px;
+          width: 240px;
           background-color: white;
           border: 1px solid #e1e4e8;
           border-radius: 6px;
@@ -93,8 +113,8 @@ export const StyledProfileDropdown = styled.div`
       }
       font-family: "Nunito";
       text-align: start;
-      padding: 10px;
-      border-bottom: 1px solid ${(props) => props.theme.secondary_background};
+      padding: 18px;
+
       ${(props) => (props.logout ? "color: red" : null)}
       &:hover {
         background-color: ${(props) => props.theme.secondary_background};

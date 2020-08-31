@@ -5,11 +5,14 @@ import {
   StyledProfileBarSvg,
   StyledProfileDropdown,
   ProfileBarWrapper,
+  ThemeToggler,
 } from "./styled";
 
 import ProfilePhoto from "../../icons/profile-pic.png";
+import DarkSwitch from "../../icons/switch-dark.svg";
+import LightSwitch from "../../icons/switch-light.svg";
 
-const ProfileBar = () => {
+const ProfileBar = ({ darkTheme, setDarkTheme }) => {
   const node = useRef();
   const [open, setOpen] = useState(false);
 
@@ -34,6 +37,12 @@ const ProfileBar = () => {
 
   return (
     <ProfileBarWrapper>
+      {/* THEME SWITCH */}
+      <ThemeToggler
+        src={darkTheme ? DarkSwitch : LightSwitch}
+        onClick={() => setDarkTheme(!darkTheme)}
+      />
+
       <StyledProfileBar ref={node} onClick={() => setOpen(!open)}>
         <StyledProfilePic src={ProfilePhoto}></StyledProfilePic>
         <StyledProfileBarSvg

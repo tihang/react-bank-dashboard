@@ -28,7 +28,7 @@ export const PrimaryButton = styled.button`
   height: 40px;
   border: none;
   background-color: ${(props) => props.theme.primary};
-  color: ${(props) => props.theme.background};
+  color: white;
   cursor: pointer;
   border-radius: 40px;
   font-family: Nunito;
@@ -43,7 +43,7 @@ export const SecondaryButton = styled.button`
   height: 40px;
   border: 1px solid ${(props) => props.theme.secondary};
   background-color: white;
-  color: ${(props) => props.theme.text_dark};
+  color: black;
   cursor: pointer;
   border-radius: 40px;
   font-family: Nunito;

@@ -1,9 +1,10 @@
 import React from "react";
+import { Heading } from "../../elements/Heading";
 
 const Investments = () => {
   return (
     <div>
-      <h1>Coming soon</h1>
+      <Heading>Investments Coming soon</Heading>
     </div>
   );
 };

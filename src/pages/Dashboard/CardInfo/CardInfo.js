@@ -39,7 +39,7 @@ const CardInfo = () => {
 
         <tr>
           <td>
-            <span>Expirty Date: </span>
+            <span>Expiry Date: </span>
           </td>
           <td>12 January 2022</td>
         </tr>
@@ -48,7 +48,7 @@ const CardInfo = () => {
           <td>
             <span>Current Balance: </span>
           </td>
-          <td>4,280.00</td>
+          <td>$ 9000.00</td>
         </tr>
       </CardTable>
     </CardInfoWrapper>
